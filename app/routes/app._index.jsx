@@ -17,7 +17,7 @@ export const loader = async ({ request }) => {
   const shop = session.shop;
 
   // 🔥 YOUR CURRENT CLOUDLFARE URL (update when it changes)
-  const APP_URL = "https://aqua-lemur-223607.hostingersite.com";
+  const APP_URL = "https://justmyapp.com";
 
   try {
     // ✅ Get Shop ID (IMPORTANT)

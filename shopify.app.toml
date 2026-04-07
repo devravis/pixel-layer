@@ -2,7 +2,7 @@
 
 client_id = "636dcf4df62660f77fcef79885894529"
 name = "pixel-layer"
-application_url = "https://aqua-lemur-223607.hostingersite.com"
+application_url = "https://justmyapp.com"
 embedded = true
 
 [build]
@@ -19,8 +19,8 @@ use_legacy_install_flow = false
 
 [auth]
 redirect_urls = [
-  "https://aqua-lemur-223607.hostingersite.com/auth/callback"
+  "https://justmyapp.com/auth/callback"
 ]
 
 [app_preferences]
-url = "https://aqua-lemur-223607.hostingersite.com/app"
+url = "https://justmyapp.com/app"
