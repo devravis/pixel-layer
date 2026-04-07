@@ -1,53 +1,86 @@
-# Node
+# ========================
+# Node modules
+# ========================
 node_modules/
+
+# ========================
+# Build output
+# ========================
+/build
+/dist
+
+# ========================
+# Environment variables
+# ========================
+.env
+.env.*
+
+# ========================
+# Prisma
+# ========================
+# Ignore generated SQLite DB files, keep migrations and schema in Git
+prisma/*.sqlite
+prisma/*.db-journal
+
+# Keep schema.prisma and migrations folder
+# prisma/schema.prisma
+# prisma/migrations/
+
+# ========================
+# Logs
+# ========================
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build output
-/build
-/dist
-
-# Environment variables (VERY IMPORTANT)
-.env
-.env.*
-
-# Prisma
-prisma/dev.db
-prisma/dev.db-journal
-
-# Logs
-logs
-*.log
-
+# ========================
 # OS files
+# ========================
 .DS_Store
 Thumbs.db
 
-# IDE
+# ========================
+# IDEs / Editor folders
+# ========================
 .vscode/
 .idea/
 
+# ========================
 # Cache
+# ========================
 .cache/
 node_modules/.cache/
 
+# ========================
 # PM2
+# ========================
 .pm2/
 
+# ========================
 # Shopify CLI
+# ========================
 .shopify/
 
+# ========================
 # Temporary files
+# ========================
 tmp/
 temp/
 
-# Coverage
+# ========================
+# Coverage / Testing
+# ========================
 coverage/
 
+# ========================
 # TypeScript
+# ========================
 *.tsbuildinfo
 
+# ========================
 # Lock files (optional)
+# ========================
 # package-lock.json
 # yarn.lock
