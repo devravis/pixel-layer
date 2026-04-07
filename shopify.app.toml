@@ -2,7 +2,7 @@
 
 client_id = "636dcf4df62660f77fcef79885894529"
 name = "pixel-layer"
-application_url = "https://payments-contributed-proc-regard.trycloudflare.com"
+application_url = "https://aqua-lemur-223607.hostingersite.com"
 embedded = true
 
 [build]
@@ -19,8 +19,8 @@ use_legacy_install_flow = false
 
 [auth]
 redirect_urls = [
-  "https://payments-contributed-proc-regard.trycloudflare.com/auth/callback"
+  "https://aqua-lemur-223607.hostingersite.com/auth/callback"
 ]
 
 [app_preferences]
-url = "https://payments-contributed-proc-regard.trycloudflare.com/app"
+url = "https://aqua-lemur-223607.hostingersite.com/app"
