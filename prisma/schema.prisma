@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Note that some adapters may set a maximum length for the String type by default, please ensure your strings are long
+// enough when changing adapters.
+// See https://www.prisma.io/docs/orm/reference/prisma-schema-reference#string for more information
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.sqlite"
+}
+
+model Session {
+  id            String    @id
+  shop          String
+  state         String
+  isOnline      Boolean   @default(false)
+  scope         String?
+  expires       DateTime?
+  accessToken   String
+  userId        BigInt?
+  firstName     String?
+  lastName      String?
+  email         String?
+  accountOwner  Boolean   @default(false)
+  locale        String?
+  collaborator  Boolean?  @default(false)
+  emailVerified Boolean?  @default(false)
+  refreshToken        String?
+  refreshTokenExpires DateTime?
+
+  // 🔥 ADD THESE (your UI colors)
+  primary   String @default("#673ee5")
+  secondary String @default("#e91e63")
+  success   String @default("#4caf50")
+  danger    String @default("#f44336")
+  warning   String @default("#ff9800")
+  info      String @default("#2196f3")
+  white     String @default("#ffffff")
+  black     String @default("#000000")
+  dark      String @default("#212121")
+
+  // 📦 Layout settings
+containerMaxWidth String? @default("1200px")
+paddingDesktop    String? @default("20px")
+paddingTablet     String? @default("15px")
+paddingMobile     String? @default("10px")
+}
