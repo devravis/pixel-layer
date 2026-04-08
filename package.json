@@ -2,7 +2,7 @@
   "name": "pixel-layer",
   "private": true,
   "scripts": {
-    "build": "npm install && npm run build:app",
+    "build": "npm install --production=false && npm run build:app",
     "build:app": "react-router build",
     "dev": "shopify app dev",
     "config:link": "shopify app config link",
