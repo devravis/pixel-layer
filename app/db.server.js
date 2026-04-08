@@ -1,11 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import mysql from "mysql2/promise";
 
-if (process.env.NODE_ENV !== "production") {
-  if (!global.prismaGlobal) {
-    global.prismaGlobal = new PrismaClient();
-  }
-}
+const pool = mysql.createPool({
+  uri: process.env.DATABASE_URL,
+  waitForConnections: true,
+  connectionLimit: 10,
+});
 
-const prisma = global.prismaGlobal ?? new PrismaClient();
-
-export default prisma;
+export default pool;
