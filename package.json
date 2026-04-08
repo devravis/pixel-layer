@@ -11,8 +11,6 @@
     "config:use": "shopify app config use",
     "env": "shopify app env",
     "start": "react-router-serve ./build/server/index.js",
-    "docker-start": "npm run setup && npm run start",
-    "setup": "npm install",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "shopify": "shopify",
     "graphql-codegen": "graphql-codegen",
@@ -30,9 +28,9 @@
     "@react-router/serve": "^7.12.0",
     "@shopify/app-bridge-react": "^4.2.4",
     "@shopify/shopify-app-react-router": "^1.1.0",
-    "@shopify/shopify-app-session-storage-mysql": "^1.1.13",
+    "@shopify/shopify-app-session-storage-mysql": "^4.0.20",
+    "dotenv": "^16.3.1",
     "isbot": "^5.1.31",
-    "mysql2": "^3.20.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.12.0",
@@ -64,5 +62,8 @@
   "trustedDependencies": [
     "@shopify/plugin-cloudflare"
   ],
+  "overrides": {
+    "p-map": "^4.0.0"
+  },
   "author": "ravismacbook"
 }

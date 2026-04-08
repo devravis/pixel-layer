@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import "@shopify/shopify-app-react-router/adapters/node";
 import {
   ApiVersion,
@@ -7,9 +8,7 @@ import {
 
 import { MySQLSessionStorage } from "@shopify/shopify-app-session-storage-mysql";
 
-const sessionStorage = new MySQLSessionStorage({
-  databaseUrl: process.env.DATABASE_URL,
-});
+const sessionStorage = new MySQLSessionStorage(process.env.DATABASE_URL);
 
 const shopify = shopifyApp({
   apiKey: process.env.SHOPIFY_API_KEY,
